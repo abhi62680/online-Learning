@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup</title>
+  <link rel="stylesheet" href="style.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+/>
+</head>
+<body>
+  <header>
+   <nav>
+      <img src="Images/eLearning_logo.png" alt="Website logo" />
+      <div class="navigation">
+        <ul>
+          <i id="menu-close" class="fa-sharp fa-regular fa-circle-xmark"></i>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="course.html">Courses</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="profile.html"> Login/Signup </a></li>
+         </ul>
+       
+      </div>
+    </nav>
+  </header>
+
+  <div class="auth-container">
+    <form class="auth-form" id="signup-form">
+      <h2>Sign Up</h2>
+      <input type="text" id="name" placeholder="Full Name" required>
+      <input type="email" id="email" placeholder="Email Address" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+      <button type="submit">Sign Up</button>
+      <p>Already have an account? <a href="profile.html">Log In</a></p>
+    </form>
+  </div>
+
+  <footer>
+   <div class="footer-col">
+     <h3>eLearning</h3>
+     <li><a href="index.html">Home</a></li>
+     <li><a href="aboutus.html">About us</a></li>
+     <li><a href="course.html">Courses</a></li>
+     <li><a href="community.html">Stories</a></li>
+     <li><a href="team.html">Our Team</a></li>
+     <li><a href="contact.html">Contact Us</a></li>
+   </div>
+
+   <div class="footer-col">
+     <h3>Resources</h3>
+     <li><a href="https://www.youtube.com/watch?v=l1EssrLxt7E&list=PLfqMhTWNBTe3H6c9OGXb5_6wcc1Mca52n" target="_blank">Web Development</a></li>
+     <li><a href="https://www.youtube.com/watch?v=HyU4vkZ2NB8&list=PLjVLYmrlmjGdDps6HAwOOVoAtBPAgIOXL" target="_blank">App Development</a></li>
+     <li><a href="https://www.youtube.com/watch?v=-ETQ97mXXF0" target="_blank">Data Science</a></li>
+     <li><a href="https://www.youtube.com/watch?v=2LaAJq1lB1Q&list=PL9ooVrP1hQOFtZ5oAAeOgi_nH-txMcDMu" target="_blank">Clound Computing</a></li>
+   </div>
+
+   <div class="footer-col">
+     <h3>Follow us</h3>
+     <li> <a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+     <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+     <li><a href="https://linkedin.com" target="_blank">Linkedin</a></li>
+     <li><a href="https://github.com" target="_blank">Github</a></li>       
+   </div>
+
+   <div class="footer-col">
+     <h3>News Letter</h3>
+     <p>
+       "Your learning journey starts here!" <br>
+"Sign up now and take a step toward achieving your dreams. <br> No spam, we promise!"
+     </p>
+     <div class="subscribe">
+       <input type="text" placeholder="Your Email Address" />
+       <a class="white" href="#">SUBSCRIBE</a>
+     </div>
+   </div>
+
+   <div class="copyright">
+     <p>
+       Copyright ©2024 All rights reserved 
+     </p>
+     <div class="social">
+       <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+       <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+       <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+     </div>
+   </div>
+ </footer>
+
+  <script>
+    document.getElementById('signup-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      // Validate the form
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirm-password').value;
+
+      if (password !== confirmPassword) {
+        alert('Passwords do not match!');
+        return;
+      }
+      // For now, we redirect to the login page
+      alert('Signup successful! Redirecting to login page...');
+      window.location.href = 'profile.html';
+    });
+  </script>
+</body>
+</html>
+
+
+
